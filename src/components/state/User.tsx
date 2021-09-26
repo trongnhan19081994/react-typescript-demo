@@ -7,6 +7,7 @@ type AuthUser = {
 
 const LoggedIn = () => {
     const [user, setUser] = useState<AuthUser | null>(null)
+    //const [user, setUser] = useState<AuthUser>({} as AuthUser) sử dụng khi không muốn giá trị ban đầu là null
     const handleLogin = () => { 
         setUser({
             name: 'tn',
