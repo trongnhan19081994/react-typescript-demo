@@ -11,6 +11,8 @@ import Input from './components/Input';
 import Oscar from './components/Oscar';
 import Person from './components/Person';
 import PersonList from './components/PersonList';
+import DomRef from './components/ref/DomRef';
+import MutableRef from './components/ref/MutableRef';
 import Counter from './components/state/Counter';
 import Status from './components/Status';
 
@@ -45,19 +47,26 @@ function App() {
       <Oscar> 
         <Heading> Oscar goes to Leonardo Dicpario! </Heading>
       </Oscar>
+      <br/>
       <Button handleClick={(event, id) => console.log('Button Click', event, id)}/>
+      <br/>
       <Input value='' handleChange={event => console.log('App', event)} />
+      <br/>
       <Container styles={{border: '1px solid black', padding: '1rem'}} />
+      <br/>
       <Counter />
-
+      <br/>
       <ThemeContextProvider>
           <Box />
       </ThemeContextProvider>
-
+      <br/>
       <UserContextProvider>
         <User />
       </UserContextProvider>
-
+      <br/>
+      <DomRef />
+      <br/>
+      <MutableRef />
     </div>
   );
 }
