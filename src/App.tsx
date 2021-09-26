@@ -15,6 +15,8 @@ import DomRef from './components/ref/DomRef';
 import MutableRef from './components/ref/MutableRef';
 import Counter from './components/state/Counter';
 import Status from './components/Status';
+import Private from './components/auth/Private';
+import Profile from './components/auth/Profile';
 
 function App() {
   const personName = {
@@ -67,6 +69,8 @@ function App() {
       <DomRef />
       <br/>
       <MutableRef />
+      <br/>
+      <Private isLoggedIn={true} component={Profile} />
     </div>
   );
 }
