@@ -17,6 +17,7 @@ import Counter from './components/state/Counter';
 import Status from './components/Status';
 import Private from './components/auth/Private';
 import Profile from './components/auth/Profile';
+import List from './components/generics/List';
 
 function App() {
   const personName = {
@@ -71,6 +72,37 @@ function App() {
       <MutableRef />
       <br/>
       <Private isLoggedIn={true} component={Profile} />
+      <br/>
+      <List 
+        items={['Batman', 'Superman','Wonder man']}
+        onClick={(item) => console.log(item)} 
+      />
+      <br/>
+      <List 
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)} 
+      />
+      <br/>
+      {/* <List 
+        items={[
+          {
+            id: 1,
+            first: 'Bruce',
+            last: 'Wayne'
+          },
+          {
+            id: 2,
+            first: 'Bruce 2',
+            last: 'Wayne 2'
+          },
+          {
+            id: 3,
+            first: 'Bruce 3',
+            last: 'Wayne 3'
+          },
+        ]}
+        onClick={(item) => console.log(item)} 
+      /> */}
     </div>
   );
 }
